@@ -1,0 +1,62 @@
+
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<style>
+    body{
+        background: AliceBlue;
+    }
+.myblock{
+    border:1px solid black;
+    border-radius: 4%;
+    background: rgba(0,0,0,0.5);
+    margin-top:20%;
+    padding:3%;
+}
+.h1{
+    margin-bottom:5% ;
+    color:coral;
+}
+.mybtn{
+ /*background: rgba(0,0,0,0.5);*/
+ margin-top: 20px;
+ margin-left: 50%;
+ text-align: center;
+}
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12 myblock">
+            <p>Your account details are below:</p>
+            <table>
+                <tr>
+                    <td>Username:</td>
+                    <td>{{ username }}</td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td>{{ password }}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>{{ email}}</td>
+                </tr>
+                <tr>
+
+                   <td> <a href="/signup" class="btn btn-block btn-danger  mybtn link">Predict</a></td>
+                   <td> <a href="/signup" class="btn btn-block btn-success  mybtn link">Home</a></td>
+                    
+                </tr>
+            </table>
+            </div>
+         <div class="col-lg-3 col-md-3 col-sm-12"></div>
+    </div>
+</div>
+{% endblock %}
+
+  
